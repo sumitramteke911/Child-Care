@@ -1,0 +1,1291 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,height=device-height"/>
+        <meta http-equiv="Content-Security-Policy"/>
+        <script type="text/javascript" src="js/header.js"></script>
+        <title>Child Care</title>
+    </head>
+    <body id="homepage">
+      <div id="header">
+        <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+          <a id="header_back_btn" onclick="goBack();" class="waves-effect waves-light left"><i class="theme-text mdi-navigation-arrow-back"></i></a>
+          <a class="brand-logo center">Child Care</a>
+          <a href="#" data-activates="slide-out" class="right button-collapse"><i class="mdi-navigation-menu"></i></a>      
+          <ul id="slide-out" class="side-nav">
+            <li><a onclick="logout();" class="waves-effect" href="#!">Home</a></li>
+            <li><a class="waves-effect modal-trigger" href="#about">About</a></li>
+            <li><a class="waves-effect modal-trigger" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+      <!-- Loader Model-->
+    <div id="loader_model" class="modal">
+    <div class="center center-align">
+     <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-theme-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+      </div>
+      <div class="container">
+      <div id="home_products_list" style="text-align:center;margin-top: 60px;">
+          <a href="#parent-confirm"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Parents</a><br><br>
+          <a href="#login_modal" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Doctor&nbsp&nbsp</a>
+      </div>
+      <div id="parent-confirm" class="modal white">
+        <div class="modal-content">
+          <a style="padding-left: 16px;" href="#parent-confirm-first"class="waves-effect waves-light btn modal-trigger modal-action modal-close">Already have a baby</a><br><br>
+          <a href="#parent-confirm-sec" class="waves-effect waves-light btn modal-trigger">Expecting a baby &nbsp&nbsp&nbsp</a>
+        </div>
+      </div>
+      <div id="book-confirm" class="modal white">
+        <div class="modal-content">
+          <div class="row">
+            <div class="input-field col s12">
+              Date
+              <input id="book_date" type="text">
+              <!-- <label for="book_date">Date</label> -->
+            </div>
+          </div>
+          <a class="modal-action modal-close book-confirm-btn waves-effect waves-light btn"><i class=""></i>Book</a>
+          <a href="#"class="waves-effect waves-light btn modal-action modal-close">Cancel</a>
+        </div>
+      </div>
+      <div id="login_modal" class="modal-big modal white">
+      <div class="modal-content">
+        <div class="row">
+            <form id="doctor-login" class="col s12">
+              <div class="row">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="username" type="text" class="validate">
+                  <label for="username">Login Id</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <a onclick="loginDoctor();" class="waves-effect waves-light btn"><i class=""></i>Login</a><a class="modal-action modal-close waves-effect waves-light btn"><i class=""></i>Cancel</a>
+              </div>
+            </form>
+          </div>
+        
+      </div>
+    </div>
+    <div id="parent-confirm-first-home" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+          <a href="#baby-vaccination"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Vaccination</a><br><br>
+          <a href="#baby-products" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Baby Products</a><br><br>
+          <a href="#baby-foods"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Food</a><br><br>
+          <a href="#baby-grouth"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Grouth Chart</a><br><br>
+          <a onclick="loadDoctors();" href="#doctor-list" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Consult Doctor</a>
+      </div>
+      </div>
+    </div>
+    <div id="baby-grouth" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4>GROWTH AND DEVELOPMENT:</h4>
+         <h6><strong class="blue-text">1 Standard growth chart</strong></h6>
+         <h5><strong class="red-text">BOYS</strong></h5>
+         <p class="no-padding">A growth chart helps you and your paediatrician track whether your baby is growing properly over time.</p>
+         <p class="no-padding">There is no ideal height and weight for a baby, but there is a growth pattern that most babies follow.</p>
+         <p class="no-padding">But to track whether your baby is growing adequately over time, you will need to use a chart that shows his growth curve and percentile.</p>
+         <h6><strong class="red-text">Boys' growth standards: birth to 12 months*</strong></h6>
+         <table clas="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Months</th>
+              <th data-field="name">Length (cm)3rd to 97th percentile</th>
+              <th data-field="name">Weight (kg)3rd to 97th percentile</th>
+              <th data-field="name">Head circumference (cm)3rd to 97th percentile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>46.3 - 53.4</td>
+            <td>2.5 - 4.3</td>
+            <td>32.1 - 36.9</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>51.1 - 58.4</td>
+            <td>3.4 - 5.7</td>
+            <td>35.1 - 39.5</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>54.7 - 62.2</td>
+            <td>4.4 - 7.0</td>
+            <td>36.9 - 41.3</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>57.6 - 65.3</td>
+            <td>5.1 - 7.9</td>
+            <td>38.3 - 42.7</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>60.0 - 67.8</td>
+            <td>5.6 - 8.6</td>
+            <td>39.4 - 43.9</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>61.9 - 69.9</td>
+            <td>6.1 - 9.2</td>
+            <td>40.3 - 44.8</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>63.6 - 71.6</td>
+            <td>6.4 - 9.7</td>
+            <td>41.0 - 45.6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>65.1 - 73.2</td>
+            <td>6.7 - 10.2</td>
+            <td>41.7 - 46.3</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>66.5 - 74.7</td>
+            <td>7.0 - 10.5</td>
+            <td>42.2 - 46.9</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>67.7 - 76.2</td>
+            <td>7.2 - 10.9</td>
+            <td>42.6 - 47.4</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>69.0 - 77.6</td>
+            <td>7.5 - 11.2</td>
+            <td>43.0 - 47.8</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>70.2 - 78.9</td>
+            <td>7.4 - 11.5</td>
+            <td>43.4 - 48.2</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>71.3 - 80.2</td>
+            <td>7.8 - 11.8</td>
+            <td>43.6 - 48.5</td>
+          </tr>
+        </tbody>
+      </table>
+<h6><strong class="red-text">Boy's growth standards 12 to 24 months*</strong></h6>
+         <table class="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Months</th>
+              <th data-field="name">Length (cm)3rd to 97th percentile</th>
+              <th data-field="name">Weight (kg)3rd to 97th percentile</th>
+              <th data-field="name">Head circumference (cm)3rd to 97th percentile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>12</td>
+            <td>71.3 - 80.2</td>
+            <td>7.8 - 11.8</td>
+            <td>32.1 - 36.9</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>72.4 - 81.5</td>
+            <td>8.0 - 12.1</td>
+            <td>43.9 - 48.8</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>73.4 - 82.7</td>
+            <td>8.2 - 12.4</td>
+            <td>44.1 - 49.0</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>74.4 - 83.9</td>
+            <td>8.4 - 12.7</td>
+            <td>44.3 - 49.3</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>75.4 - 85.1</td>
+            <td>8.5 - 12.9</td>
+            <td>44.5 - 49.5</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>76.3 - 86.2</td>
+            <td>8.7 - 13.2</td>
+            <td>44.7 - 49.7</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>77.2 - 87.3</td>
+            <td>8.9 - 13.5</td>
+            <td>44.9 - 49.9</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>78.1 - 88.4</td>
+            <td>9.0 - 13.7</td>
+            <td>45.0 - 50.0</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>78.9 - 89.5</td>
+            <td>9.2 - 14.0</td>
+            <td>45.2 - 50.2</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>79.7 - 90.5</td>
+            <td>9.3 - 14.3</td>
+            <td>45.3 - 50.4</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>80.5 - 91.6</td>
+            <td>9.5 - 14.5</td>
+            <td>45.4 - 50.5</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>81.3 - 92.6</td>
+            <td>9.7 - 14.8</td>
+            <td>45.6 - 50.7</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>82.1 - 93.6</td>
+            <td>9.8 - 15.1</td>
+            <td>45.7 - 50.8</td>
+          </tr>
+        </tbody>
+      </table>
+      <h5><strong class="red-text">Baby girl's growth chart</strong></h5>
+         <p class="no-padding">This chart gives the measurement range between the 3rd and 97th percentile of the WHO growth standards for baby girls. Checking that your baby fits into this range can reassure you that she is within the normal range of height, weight and head circumference measurements for her age.</p>
+         <p class="no-padding">But to track whether your baby is growing adequately over time, you will need to use a chart that shows her growth curve and percentile.</p>
+         <h6><strong class="red-text">Girl's growth standards: birth to 12 months*</strong></h6>
+         <table clas="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Months</th>
+              <th data-field="name">Length (cm)3rd to 97th percentile</th>
+              <th data-field="name">Weight (kg)3rd to 97th percentile</th>
+              <th data-field="name">Head circumference (cm)3rd to 97th percentile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>45.6 - 52.7</td>
+            <td>2.4 - 4.2</td>
+            <td>31.7 - 36.1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>50.0 - 57.4</td>
+            <td>3.2 - 5.4</td>
+            <td>34.3 - 38.8</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>53.2 - 60.9</td>
+            <td>4.0 - 6.5</td>
+            <td>36.0 - 40.5</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>55.8 - 63.8</td>
+            <td>4.6 - 7.4</td>
+            <td>37.2 - 41.9</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>58.0 - 66.2</td>
+            <td>5.1 - 8.1</td>
+            <td>38.2 - 43.0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>59.9 - 68.2</td>
+            <td>5.5 - 8.7</td>
+            <td>39.0 - 43.9</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>61.5 - 70.0</td>
+            <td>5.8 - 9.2</td>
+            <td>39.7 - 44.6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>62.9 - 71.6</td>
+            <td>6.1 - 9.6</td>
+            <td>40.4 - 45.3</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>64.3 - 73.2</td>
+            <td>6.3 - 10.0</td>
+            <td>40.9 - 45.9</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>65.6 - 74.7</td>
+            <td>6.6 - 10.4</td>
+            <td>41.3 - 46.3</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>66.8 - 76.1</td>
+            <td>6.8 - 10.7</td>
+            <td>41.7 - 46.8</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>68.0 - 77.5</td>
+            <td>7.0 - 11.0</td>
+            <td>42.0 - 47.1</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>69.2 -  78.9</td>
+            <td>7.1 - 11.3</td>
+            <td>42.3 - 47.5</td>
+          </tr>
+        </tbody>
+      </table>
+      <h6><strong class="red-text">Girls' growth standards 12 to 24 months*</strong></h6>
+      <table class="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Months</th>
+              <th data-field="name">Length (cm)3rd to 97th percentile</th>
+              <th data-field="name">Weight (kg)3rd to 97th percentile</th>
+              <th data-field="name">Head circumference (cm)3rd to 97th percentile</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>12</td>
+            <td>69.2 - 78.9</td>
+            <td>7.1 - 11.3</td>
+            <td>42.3 - 47.5</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>70.3 - 80.2</td>
+            <td>7.3 - 11.6</td>
+            <td>42.6 - 47.7</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>71.3 - 81.4</td>
+            <td>7.5 - 11.9</td>
+            <td>42.9 - 48.0</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>72.4 - 82.7</td>
+            <td>7.7 - 12.2</td>
+            <td>43.1 - 48.2</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>73.3 - 83.9</td>
+            <td>7.8 - 12.5</td>
+            <td>43.3 - 48.5</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>74.3 - 85.0</td>
+            <td>8.0 - 12.7</td>
+            <td>43.5 - 48.7</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>75.2 - 86.2</td>
+            <td>8.2 - 13.0</td>
+            <td>43.6 - 48.8</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>76.2 - 87.3</td>
+            <td>8.3 - 13.3</td>
+            <td>43.8 - 49.0</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>77.0 - 88.4</td>
+            <td>8.5 - 13.5</td>
+            <td>44.0 - 49.2</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td>77.9 - 89.4</td>
+            <td>8.7 - 13.8</td>
+            <td>44.1 - 49.4</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>78.7 - 90.5</td>
+            <td>8.8 - 14.1</td>
+            <td>44.3 - 49.5</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>79.6 - 91.5</td>
+            <td>9.0 - 14.3</td>
+            <td>44.4 - 49.7</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>80.3 - 92.5</td>
+            <td>9.2 - 14.6</td>
+            <td>44.6 - 49.8</td>
+          </tr>
+        </tbody>
+      </table>
+      <h6><strong class="blue-text">2.Standard growth chart</strong></h6>
+      <h6><strong class="red-text">Milestone chart: One to six months</strong></h6>
+      What to expect from your baby at this stage. 
+         <table class="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Mastered Skills (most children can do)</th>
+              <th data-field="name">Emerging Skills (half of children can do)</th>
+              <th data-field="name">Advanced Skills (a few children can do)</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr><td>Child's Age : One month</td></tr>
+          <tr>
+            <td>
+              -Lifts head<br>
+              -Responds to sound<br>
+              -Stares at faces<br>
+            </td>
+            <td>-Follows objects<br>
+                -Ooohs and ahhs<br>
+                -Can see black-and-white patterns</td>
+            <td>-Smiles<br>
+                -Laughs<br>
+                -Holds head at 45-degree angle
+            </td>
+          </tr>
+          <tr><td>Child's Age : Two months</td></tr>
+          <tr>
+            <td>
+              -Vocalises sounds - gurgling and cooing<br>
+              -Follows objects Holds head up for<br>
+              -short periods<br>
+            </td>
+            <td>-Smiles, laughs<br>
+                -Holds head at 45-degree angle<br>
+                -Movements become smoother
+              </td>
+            <td>-Holds head steady<br>
+                -Bears weight on legs<br>
+                -May lift head and shoulder (mini-pushup)
+            </td>
+          </tr>
+          <tr><td>Child's Age : Three months</td></tr>
+          <tr>
+            <td>
+              -Laughs<br>
+              -Holds head steady<br>
+              -Recognises your faceand scent<br>
+            </td>
+            <td>-Squeals, gurgles, coos<br>
+                -Recognises your voice<br>
+                -Does mini-pushups
+              </td>
+            <td>-Turns towards loud sounds<br>
+                -Can bring hands together and may bat at toys<br>
+                -Can roll over
+            </td>
+          </tr>
+          <tr><td>Child's Age : Four months</td></tr>
+          <tr>
+            <td>
+              -Holds head up steadily<br>
+              -Can bear weight on legs<br>
+              -Coos when you talk to him<br>
+            </td>
+            <td>-Can grasp a toy<br>
+                -Reaches out for objects<br>
+                -Can roll over
+              </td>
+            <td>-Imitates speech sounds - baba, dada<br>
+                -May cut first tooth<br>
+            </td>
+          </tr>
+          <tr><td>Child's Age : Five months</td></tr>
+          <tr>
+            <td>
+              -Can distinguish between bold colours<br>
+              -Can roll over<br>
+              -Amuses himself by playing with hands and feet<br>
+            </td>
+            <td>-Turns towardsnew sounds<br>
+                -Recognises own name<br>
+                -May be ready for solids
+              </td>
+            <td>-May sit momentarily without support<br>
+                -Mouths objects<br>
+                -Stranger anxiety may begin
+            </td>
+          </tr>
+           <tr><td>Child's Age : Six months</td></tr>
+          <tr>
+            <td>
+              -Turns towards sounds and voices<br>
+              -Imitates sounds, blows bubbles<br>
+              -Rolls in both directions<br>
+            </td>
+            <td>-Reaches for objects and mouths them<br>
+                -Sits without support<br>
+                -Is ready for solids
+              </td>
+            <td>-May lunge forward orstart crawling<br>
+                -May jabber or combine syllables<br>
+                -May drag object towards himself
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div id="baby-products" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4>Baby Products<h4>
+         <h6><strong class="blue-text">Baby products: Must-haves till the first year</strong></h6>
+          <div class="col s12"><img class="responsive-img" src="images/products.jpg"></div>
+          <p class="no-padding"><strong>Baby clothes</strong><br>Baby clothes are usually sized by age, but this can vary among brands.Look for clothes that also list weight or height guidelines to help you find the ones that will fit your baby best.For everyday wear, think comfort and ease. Organic baby clothing is made without harsh dyes or potentially harmful chemicals, but it's usually more expensive Here are the basics your baby will need for the first year:</p>
+          <ul><li>One-piece outfits (5 to 7)</li>
+<li>Shirts and bodysuits (5 to 7)</li>
+<li>Leggings or stretchy pants (5 to 7)</li>
+<li>Outer layers (5)</li>
+<li>Hats and mittens</li>
+<li>Socks or booties </li>
+<li>Shoes</li>
+<li>Pajamas or sleepers (5 to 7)</li>
+</ul>
+<p class="no-padding"><strong>Diapers</strong><br>Whether you use cloth, disposable, or something in between (like a diaper with a disposable lining and reusable cover), your baby probably will go through 10 to 12 diapers a day at first, so plan accordingly. If you use disposables, you might want to start with small packs of a few different kinds in case certain types irritate your baby's skin or don't fit well.</p>
+          <ul><li>Wipes</li>
+              <li>Changing pad or table</li>
+          </ul>
+<p class="no-padding"><strong>Baby gear</strong><br>Wearing your baby means your little one gets to snuggle close to you, and you'll have two free hands to do everything else.
+When choosing a baby carrier, make sure all straps and harnesses support your baby securely. It's also a good idea to find one that can be laundered or cleaned easily.
+</p>
+          <ul><li>Stroller:</li>
+              <li>Car seat:</li>
+          </ul>
+          <p class="no-padding"><strong>Breastfeeding and bottle-feeding</strong><br></p>
+          <ul><li>Nursing or feeding pillow</li>
+              <li>Breastfeeding accessories</li>
+          </ul>
+          <p class="no-padding"><strong>Burp cloths (6 to 12):</strong><br>Lightweight cloths (or cloth diapers) catch spit-up and wipe up other baby fluids.</p>
+          <p class="no-padding"><strong>Bottles (6 to 12):</strong><br>Newborns usually start with the 4-ounce size, but you'll need some 8-ounce bottles as your child begins to drink more</p>
+          <p class="no-padding"><strong>Formula:</strong><br>If you aren't breastfeeding, you have lots of infant formula options to choose from – check out our formula primer and talk to your healthcare provider.</p>
+          <p class="no-padding"><strong>Bottle brushes (2):</strong><br>These are handy for thoroughly scrubbing small parts and crevices in bottles, bottle parts, and nipples.</p>
+          <p class="no-padding"><strong>Breast pump:</strong></p>
+          <p class="no-padding"><strong>Breast milk bags:</strong></p>
+          <h6><strong class="blue-text">Breastfeeding and bottle-feeding</strong></h6>
+
+          <h6><strong class="blue-text">Sleeping</strong></h6>
+          <p class="no-padding">Crib and mattress: Many new parents don't need a crib right away, choosing to use a bassinet or play yard with a bassinet feature or bring their newborn into their bed instead.<br>
+Bedding: You'll see plenty of fancy bedding sets in baby stores, but all you really need are three to five fitted crib sheets and a waterproof crib mattress pad.<br>
+<strong>Wearable blankets (2 or 3):</strong><br> 
+<strong>Swaddling blankets (3):</strong></p>
+
+<h6><strong class="blue-text">Feeding</strong></h6>
+<p class="no-padding">When your baby is ready for solid food, somewhere between 4 and 6 months of age, these feeding supplies can make the transition easier.<br>
+<strong>Highchair:</strong> You can buy a freestanding highchair, a seat that hooks onto a counter or table, or a portable highchair that attaches to a regular chair.
+</p>
+<p class="no-padding"><strong>Bowls (2 to 3)<br>
+Baby spoons (3 to 5):<br> 
+Sippy cups (3 to 5):<br> 
+Bibs (3 to 5):
+</p>
+
+<h6><strong class="blue-text">Bathing</strong></h6>
+<p class="no-padding"><strong>Bath tub:</strong>The kitchen sink works fine at first for bathing your baby, but you might want to move your baby to a tub before too long. Choose one that's sturdy and well made.
+</p>
+<p class="no-padding"><strong>Soap and shampoo:<br>Towels (2 to 3)<br>Washcloths (4 to 6)</strong></p>
+
+<h6><strong class="blue-text">Baby soothers, toys, and entertainment</strong></h6>
+
+<p class="no-padding"><strong>Pacifiers (3 to 5):<br>Bouncy seat:<br>Play mat and gym.<br>Toys<br>Nightlight<br>Books</strong></p>
+
+<h6><strong class="blue-text">Safety</strong></h6>
+<p class="no-padding">As soon as your child is rolling, crawling, or creeping around, you'll need to be aware ofthe biggest household dangers so you can childproof your home.
+A few pieces of safety equipment can help protect your baby from many common hazards.
+</p>
+<p class="no-padding"><strong>Safety gates<br>Outlet covers<br>Cupboard and drawer latches<br>Toilet seat locks<br>Baby monitor</strong></p>
+
+<h6><strong class="blue-text">Health</strong></h6>
+<p class="no-padding">First-aid kit: See what to keep in your first-aid kit.</p>
+<p class="no-padding"><strong>Bulb syringe<br>Teething toys<br>Digital thermometer.<br>Baby nail scissors or clippers<br>Baby-friendly laundry detergent<br>Soft-bristled baby brush</strong></p>
+
+      </div>
+      </div>
+    </div>
+    <div id="baby-vaccination" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4>Vaccination<h4>
+          <h6><strong class="blue-text">Table I.  IAP Immunization Timetable 2016</strong></h6>
+          <h6>I. IAP recommended vaccines for routine use</h6>
+          <table class="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Age(completed weeks/months/years)</th>
+              <th data-field="name">Vaccines</th>
+              <th data-field="name">Number of Days after birth 0 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>At birth</td>
+            <td>BCG,OPV 0 ,Hep-B 1</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>6 weeks</td>
+            <td>DTwP 1<br>IPV 1<br>Hep-B 2<br>Hib 1<br>Rotavirus 1<br>PCV 1</td>
+            <td>42</td>
+          </tr>
+          <tr>
+            <td>10 weeks</td>
+            <td>DTwP 2<br>IPV 2<br>Hib 2<br>Rotavirus 2<br>PCV 2</td>
+            <td>70 days after birth</td>
+          </tr>
+          <tr>
+            <td>14 weeks</td>
+            <td>DTwP 3<br>IPV 3<br>Hib 3<br>Rotavirus 3<br>PCV 3</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>6 months</td>
+            <td>OPV 1<br>Hep-B 3</td>
+            <td>182</td>
+          </tr>
+          <tr>
+            <td>9 months</td>
+            <td>OPV 2<br>MMR-1</td>
+            <td>273</td>
+          </tr>
+          <tr>
+            <td>9-12 months</td>
+            <td>Typhoid<br>Conjugate<br>Vaccine</td>
+            <td>273</td>
+          </tr>
+          <tr>
+            <td>12 months</td>
+            <td>Hep-A 1</td>
+            <td>365</td>
+          </tr>
+          <tr>
+            <td>15 months</td>
+            <td>MMR 2<br>Varicella 1<br>PCV booster</td>
+            <td>457</td>
+          </tr>
+          <tr>
+            <td>16 to 18 months</td>
+            <td>DTwP<br>B1/DTaP<br>B1<br>IPV B1<br>Hib B1</td>
+            <td>487</td>
+          </tr>
+          <tr>
+            <td>18 months</td>
+            <td>Hep-A 2</td>
+            <td>547</td>
+          </tr>
+          <tr>
+            <td>2 years</td>
+            <td>Booster of Typhoid Conjugate Vaccine</td>
+            <td>730</td>
+          </tr>
+          <tr>
+            <td>4 to 6 years</td>
+            <td>DTwP<br>B2/DTaP<br>B2<br>OPV 3<br>Varicella 2<br>MMR 3</td>
+            <td>1461 days after birth date</td>
+          </tr>
+          <tr>
+            <td>10 to 12 years</td>
+            <td>Tdap/Td<br>HPV</td>
+            <td>3652 days after birth</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+    </div>
+    <div id="baby-foods" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+        <h4>FOOD</h4>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">Feeding Your 1- to 3-Month-Old</div>
+            <div class="collapsible-body"><div>During your baby's first 3 months, breast milk or formula will provide all the nutrition needed. But as your infant develops physically and mentally, the feeding process will evolve. In general, babies move toward consuming more milk during each feeding, so won't need to feed as often and will sleep longer at night.
+But there will be times during the next year — and, especially, in the first 3 months — when a growth spurt increases your baby's appetite.<br>
+<h6><strong class="blue-text">Breastfeeding: How Much and How Often?</strong></h6><br>After the first few weeks following birth, breastfed babies start to feed less often and sleep for longer periods at night. You can be reassured that your breastfed infant probably is eating enough if he or she:<br><br>
+1) seems alert, content, and active<br><br>
+2) is steadily gaining weight, growing, and developing<br><br>
+3) feeds six to eight times per day<br><br>
+4) is wetting and soiling diapers on a regular basis<br><br>
+</div></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Feeding Your 4- to 7-Month-Old</div>
+            <div class="collapsible-body"><div>Most babies this age are introduced to solid foods. Experts recommend gradually introducing solid foods when a baby is about 6 months old, depending on the baby's readiness and nutritional needs.
+Be sure to check with your doctor before starting any solid foods.<br>
+<h6><strong class="blue-text">Is My Baby Ready to Eat Solids?</strong></h6>
+How can you tell if your baby is ready for solids? Here are a few hints:<br><br>
+1) Is your baby's tongue-thrust reflex gone or diminished? This reflex, which prevents infants from choking, also causes them to push food out of their mouths.<br><br>
+2) Can your baby support his or her own head? To eat solid food, an infant needs good head and neck control and should be able to sit up.
+<br><br>
+3) Is your baby interested in food? A 6-month-old baby who stares and grabs at your food at dinnertime is clearly ready for some variety in the food department.
+<br>
+</div></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Feeding Your 8- to 12-Month-Old</div>
+            <div class="collapsible-body"><div>By about 8 months old, most babies are pros at handling the iron-fortified infant cereals and the pureed foods that have been introduced as part of their diet along with breast milk or formula.
+Over the next few months, they start to explore table foods.<br>
+<h6><strong class="blue-text">Changing Eating Habits</strong></h6>As you expand your baby's palate, continue to give new foods a trial run (a few days to a week) to look for any allergic reactions. But:
+<br><br>
+1) Do not give honey until after a baby's first birthday. Honey may contain certain spores that, while harmless to adults, can causebotulism in babies.<br><br>
+2) And do not give regular cow's milk until your baby is older than 12 months because it does not have the nutrition that infants need.
+<br><br>
+By the first birthday, babies usually are ready to go from formula to cow's milk. If you're breastfeeding, you can continue beyond your baby’s first birthday, if desired, or you may decide to stop.
+</div></div>
+          </li>
+          <li>
+            <div class="collapsible-header">Feeding Your 1- to 2-year-Old</div>
+            <div class="collapsible-body">
+<div>Toddlers this age are moving from the eating habits they had as infants toward a diet more like your own.<br><br> Your job is to keep introducing new flavors and textures. Food preferences are set early in life, so help your child develop a taste for healthy foods now.
+<br><br>Toddlers have little tummies, so serve foods that are packed with the nutrients they need to grow healthy and strong, and limit the sweets and empty calories.
+<br><br>Toddlers also like to assert their independence, and the table is one place where you should give yours some sense of control. Allow your toddler to respond to internal cues for hunger and fullness but set the boundaries.</div>
+</div>
+          </li>
+        </ul>
+ <h6><strong class="blue-text">A Word About Milk</strong></h6>
+ <p>Milk is an important part of a toddler's diet because it provides calcium and vitamin D, which help build strong bones. Most kids under age 2 should drink whole milk for the dietary fats needed for normal growth and brain development.</p><p>When your child is 2, you can make the switch to low-fat or nonfat milk.</p>
+ <div class="col s12"><img class="responsive-img" src="images/food.jpg"></div>
+      </div>
+      </div>
+    </div>
+    <div id="parent-confirm-sec-home" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+          <a href="#baby-test"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Medical Test</a><br><br>
+          <a href="#baby-food-nutri" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Food & Nutrients</a><br><br>
+          <a href="#baby-physical-emotional"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Physical & Emotional Change</a><br><br>
+          <a href="#baby-exercise" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Exercise</a><br><br>
+          <a onclick="loadDoctors();" href="#doctor-list" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Consult Doctor</a>
+      </div>
+      </div>
+    </div>
+    <div id="baby-test" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4 class="red-text">Medical tests</h4>
+         <div class="col s12"><img class="responsive-img" src="images/medical_tests.jpg"></div>
+         <h6><strong class="blue-text">First Trimester Prenatal Screening Tests</strong></h6>
+         <p class="no-padding">This screening process can help to determine the risk of the fetus having certain birth defects. Screening tests may be used alone or in combination with other tests.There are three parts of first trimester screening:</p>
+         <p class="no-padding"><strong>1) Ultrasound test for fetal nuchal translucency (NT)</strong>. Nuchal translucency screening uses an ultrasound test to examine the area at the back of the fetal neck for increased fluid or thickening and to determine  pregnancy date.</p>
+         <p class="no-padding"><strong>2) Two maternal serum (blood) tests.</strong>The blood tests measure two substances found in the blood of all pregnant women:</p>
+         <p class="no-padding"><strong>3) Pregnancy-associated plasma protein screening (PAPP-A)--</strong> a protein produced by the placenta in early pregnancy. Abnormal levels are associated with an increased risk for chromosome abnormality.</p>
+         <p class="no-padding"><strong>3) Human chorionic gonadotropin (hCG)--</strong> a hormone produced by the placenta in early pregnancy. Abnormal levels are associated with an increased risk for chromosome abnormality.</p>
+         <h6><strong class="blue-text">Second Trimester Prenatal Screening Tests</strong></h6>
+         <p class="no-padding">This Screening is usually performed by taking a sample of the mother's blood between the 15th and 20th weeks of pregnancy (16th to 18th is ideal). The multiple markers include:</p>
+         <p class="no-padding"><strong>Alpha-fetoprotein screening (AFP).</strong>This blood test measures the level of alpha-fetoprotein in the mothers' blood during pregnancy. AFP is a protein normally produced by the fetal liver and is present in the fluid surrounding the fetus (amniotic fluid), and crosses the placenta into the mother's blood. The AFP blood test is also called MSAFP (maternal serum AFP).Abnormal levels of AFP may signal the following:</p>
+         <ul>
+          <li>-Open neural tube defects (ONTD), such as spina bifida</li>
+          <li>-Down syndrome</li>
+          <li>-Other chromosomal abnormalities</li>
+          <li>-Defects in the abdominal wall of the fetus</li>
+          <li>-Twins--more than one fetus is making the protein</li>
+         </ul>
+         <h6><strong class="green-text">What do each of the diagnostic tests tell the doctor</strong></h6>
+         <table class="bordered">
+        <thead>
+          <tr>
+              <th data-field="id">Diagnostic test</th>
+              <th data-field="name">Possible Findings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regular blood test</td>
+            <td>Confirmation of pregnancy (hCG hormone), blood group and Rh- disease, heamoglobin levels, platelet count</td>
+          </tr>
+          <tr>
+            <td>AIDS blood test</td>
+            <td>AIDS</td>
+          </tr>
+          <tr>
+            <td>Hepatitis B blood test</td>
+            <td>Hepatitis B</td>
+          </tr>
+          <tr>
+            <td>Rubella blood test</td>
+            <td>Rubella (German Measles)</td>
+          </tr>
+          <tr>
+            <td>Alphafeto-protein (AFP) blood test</td>
+            <td>Neural Tube Defects (NTD)</td>
+          </tr>
+          <tr>
+            <td>Urine Test</td>
+            <td>Confirmation of pregnancy (hCG hormone), sugar, albumin, bacteria</td>
+          </tr>
+          <tr>
+            <td>Sonogram (Ultrasound Scan)</td>
+            <td>Genetic deformities (including Down's syndrome)</td>
+          </tr>
+          <tr>
+            <td>Amniocentesis</td>
+            <td>Spina bifida (Open Spine), Anencephaly (Failure of brain formation), Down's syndrome</td>
+          </tr>
+          <tr>
+            <td>Chorionic Villi Sampling (CVS)</td>
+            <td>Tay-Sachs, sickle-cell anaemia, Down's syndrome, thalassaemia</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      </div>
+    </div>
+    <div id="baby-food-nutri" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4 class="red-text">Food and Nutrients:</h4>
+         <h6><strong>Foods You Should Eat</strong></h6>
+         <p class="no-padding">During pregnancy, the goal is to be eating nutritious foods most of the time. To maximize prenatal nutrition, doctors advises emphasizing the following five food groups: fruits, vegetables, lean protein, whole grains and dairy products. </p>
+         <div class="col s12"><img class="responsive-img" src="images/f1.jpg"></div><div class="col s12"><img class="responsive-img" src="images/f2.jpg"></div>
+         <p class="no-padding"><strong>Fruits and vegetables:  Lean protein:  Whole grains  Dairy</strong></p>
+         <p class="no-padding"><strong>Folic acid</strong>, also known as folate when found in foods, is a B vitamin that is crucial in helping to prevent birth defects in the baby's brain and spine.Food sources: leafy green vegetables, fortified or enriched cereals, breads and pastas.</p>
+         <p class="no-padding"><strong>Calcium</strong>is a mineral used to build a baby's bones and teeth. If a pregnant woman does not consume enough calcium, the mineral will be drawn from the mother's stores in her bones and given to the baby to meet the extra demands of pregnancy.Food sources: milk, yogurt, cheese, calcium-fortified juices and foods, sardines or salmon with bones, some leafy greens (kale, bok choy).</p>
+         <p class="no-padding"><strong>Iron:</strong>Pregnant women need 27 milligrams of iron a day, which is double the amount needed by women who are not expecting.Food sources: meat, poultry, fish, dried beans and peas, iron-fortified cereal.</p>
+        <p class="no-padding"><strong>Protein:</strong>More protein is needed during pregnancy, but most women don't have problems getting enough of these foods in their diets.Food sources: meat, poultry, fish, dried beans and peas, eggs, nuts, tofu.</p>
+         <h6><strong>Foods You Should AVOID</strong></h6>
+         <p class="no-padding"><strong>Caffeine</strong> Taking in high doses of caffeine daily during pregnancy -- whether from coffee, tea, cola, cocoa, or energy drinks -- has long been associated with an increased risk of miscarriage</p>
+         <p class="no-padding"><strong>Soft cheeses</strong> It's best to avoid cheeses such as Brie, goat, Camembert, feta, queso blanco, and blue or other veined varieties. Why? They may be unpasteurized and contaminated with listeria -- bacteria that can trigger food poisoning. 
+         </p>
+         <p class="no-padding"><strong>Fish</strong> You probably already know that mercury, which is present in many fish, is dangerous for your baby. 
+         </p>
+        <p class="no-padding"><strong>Eggs</strong> No one is going to tell you to avoid eggs, which are a high-quality source of protein and contain important nutrients like choline. But eggs do have some risk of being contaminated with salmonella, which is more dangerous for pregnant women than for the general population.
+         </p>
+         <p class="no-padding"><strong>ALCHOHOL:</strong> Absolutely not, warn many experts. Heavy drinking can lead to Fetal Alcohol Syndrome (FAS), which causes mental retardation and a host of abnormalities. 
+         </p>
+         <p class="no-padding"><strong>Meat:</strong>
+         </p>
+         <p class="no-padding"><strong>Sushi:</strong>
+         </p>
+         <p class="no-padding"><strong>Unpasteurized Juice:</strong>
+         </p>
+      </div>
+      </div>
+    </div>
+    <div id="baby-physical-emotional" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4 class="red-text">Physical and Emotional Changes :</h4>
+         <div class="col s12"><img class="responsive-img" src="images/chnages.png"></div>
+         <h6><strong>The Physical Changes During Pregnancy</strong></h6>
+         <p class="no-padding"><strong>Nasuea </strong>"Morning sickness," as it is typically referred to, is present usually from 6 to 14 weeks, but may last the majority of the pregnancy. Some women do not experience morning sickness while others are hospitalized for periodic worsening that prevents proper hydration and/or nutrition. </p>
+         <p class="no-padding"><strong>Sore and growing breasts </strong>,Early in your pregnancy, your breasts may be tender and swollen. After the first few months, your areolas — the pigmented circles around your nipples — will also be bigger and darker. Later in the pregnancy as your breasts prepare for breastfeeding, they get even bigger and may leak an early form of milk called colostrum. Be sure to wear a well-fitting bra that provides both comfort and support.</p>
+         <p class="no-padding"><strong>Fatigue and body aches</strong>Fatigue is very common in the first four months of pregnancy. This is mostly due to the hormone effects of early pregnancy, but increased fatigue and decreased exercise tolerance is common throughout pregnancy.</p>
+         <p class="no-padding"><strong>Growing abdomen</strong>The most apparent physical change will be your growing mid-section. For most women, this growth is noticed from the fourth month through the end of pregnancy.</p>
+          <p class="no-padding"><strong>Stretch marks and skin changes</strong>Stretch marks—they’re one of the most talked about changes during pregnancy, and also one of the most common. They appear in 50 to 90 percent of all pregnant women, usually showing up in the latter half of pregnancy.</p>
+          <p class="no-padding"><strong>Weight gain</strong>Normal weight gain ranges from 25 to 35 pounds. Most weight gain happens between 10 to 40 weeks with approximately 8 pounds per 10 weeks. During the first 10 weeks, some may have a small drop in weight or if nausea and/or vomiting issues are steady, but most women gain 3 pounds or less in the first 10 weeks.During pregnancy, you should only consume 300 more calories per day than the normal dietary needs.</p>
+          <p class="no-padding"><strong>Digestive and urinary issues</strong>The digestive system slows down the movement of fluids and solids through the body during pregnancy and increased uterine size increases pressure on intestinal tract. Both processes increase the risk for nausea, vomiting, constipation and haemorrhoids</p>
+          <p class="no-padding">Urination may become increasingly frequent due to enlargement of the uterus and pressure placed on the bladder. During pregnancy there is an increased risk for urinary tract infections, but common symptoms of UTI, such as painful urination, may be reduced due to hormonal changes in urinary tract.</p>
+         <h6><strong>The Emotional Changes During Pregnancy</strong></h6>
+         <p class="no-padding">During pregnancy it is normal to be preoccupied with how your body is quickly changing, how to manage symptoms, how different your life is becoming, worry about the pregnancy going well, finances, and keeping up with everyday life.It is common to go through many of the following changes in a pregnancy:</p>
+         <p class="no-padding"><strong>-First trimester.</strong>Extreme fatigue or morning sickness can color your daily life. Moodiness (as with premenstrual syndrome) is normal. Happiness and anxiety about a new pregnancy, or feeling upset about an unplanned pregnancy, are also common.</p>
+         <p class="no-padding"><strong>-Second trimester.</strong>Fatigue, morning sickness, and moodiness usually improve or go away. You may feel more forgetful and disorganized than before. Looking heavier than normal, then looking visibly pregnant and feeling the baby move, can make you feel any number of emotions.
+         </p>
+        <p class="no-padding"><strong>-Third trimester.</strong>Forgetfulness may continue. As your due date nears, it is common to feel more anxious about the childbirth and how a new baby will change your life. As you feel more tired and uncomfortable, you may be more irritable than before.
+         </p>
+         <p class="no-padding">For some women, serious anxiety or depression problems improve during pregnancy. For others, they do not. If you find no pleasure in daily life, or suffer from a lot of sleeplessness (insomnia), sadness, tearfulness, anxiety, hopelessness, feelings of worthlessness and guilt, irritability, appetite change, or poor concentration, talk to your health professional. Without treatment, mental health problems can get in the way of a healthy pregnancy.
+         </p>
+      </div>
+      </div>
+    </div>
+    <div id="baby-exercise" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+         <h4 class="red-text">Exercise:</h4>
+         <h6><strong>What Not to Do While Pregnant</strong></h6>
+         <ul>
+          <li>-Hot or Bikram yoga</li>
+          <li>-Major backbends</li>
+          <li>-Lower spinal or deep twists</li>
+          <li>-Too much ab work</li>
+          <li>-Belly down postures (Cobra, Locust, Bow, etc.)</li>
+          <li>-Lying on your back for a long time</li>
+          <li>-Overstretch – Your body, clever little thing it is, is producing a hormone that softens tissues and ligaments in the pelvic floor (trust me you’ll be grateful for this when b-day rolls around!), which increases your risk of pulling a muscle if you stretch further than usual.</li>
+          <li>-Breath retention (kumbhaka)</li>
+         </ul>
+         <h6><strong>What to Do While Pregnant</strong></h6>
+         <ul>
+          <li>-Get the all-clear from your doc or midwife</li>
+          <li>-Be present in your body and with your baby</li>
+          <li>-Be gentle and kind to yourself</li>
+          <li>-Listen to, and love, your body</li>
+          <li>-Check all judgment at the door</li>
+         </ul>
+         <h6><strong>What to Do While Pregnant</strong></h6>
+         <p class="no-padding"><strong>1. Reclined Bound Angle Pose (Supta Baddha Konasana)</strong>This pose increases blood circulation in the lower abdomen, stretches the groin, and increases external rotation in the hips. It’s also my favourite way to calm down and relax my anxious mind.Make sure to modify this posture for pregnancy by placing a bolster or two under your back and head to create an incline (so you are not flat on your back), and a block between feet to broaden your pelvis.</p>
+         <div class="col s12"><img class="responsive-img" src="images/exercise/1.jpg"></div>
+         <p class="no-padding"><strong>2. Child’s Pose (Balasana) </strong>Balasana can fight off nausea, relieve anxiety, and quiet the mind. Modify for pregnancy by placing a bolster under the torso for support.</p>
+         <div class="col s12"><img class="responsive-img" src="images/exercise/2.jpg"></div>
+         <p class="no-padding"><strong>3. Cat/Cow Pose (Marjaryasana Bitilasana)</strong>As the baby grows, more pressure is put on the spine, so moving on hands and knees relieves that pressure. Table Top position also encourages the baby into proper position for delivery and can provide relief during contractions in labour.</p>
+         <div class="col s12"><img class="responsive-img" src="images/exercise/3.jpg"></div>
+         <p class="no-padding"><strong>4. Garland or Squat Pose (Malasana)</strong>Hanging out in a squat like this really opens the hips and pelvis, which is ideal for prenatal practice. It is also known to stimulate digestion and is a great stretch through the legs and back. Modify for pregnancy by leaning against a wall or squatting on blankets. Only suitable until about 30 weeks.</p>
+         <div class="col s12"><img class="responsive-img" src="images/exercise/4.jpg"></div>
+          <p class="no-padding"><strong>5. Goddess Pose (Utkata Konasana)</strong>This is an amazing prep pose for childbirth. It opens the hips and groin and creates space in the pelvis. It also strengthens and tones the many muscles in the legs. We often have a tendency to internally collapse the knee, so line it up with your second toe to prevent injury.</p>
+          <div class="col s12"><img class="responsive-img" src="images/exercise/5.jpg"></div>
+          <p class="no-padding"><strong>6. Extended Triangle Pose (Trikonasana)</strong>I found Trikonasana incredibly helpful for relieving backache and creating length through the side body. It is also known for its ability to reduce stiffness in the neck, tone the pelvic floor, and relieve indigestion. Take a shorter stance than usual and microbend the front knee.</p>
+          <div class="col s12"><img class="responsive-img" src="images/exercise/6.jpg"></div>
+          <p class="no-padding"><strong>7. Extended Side Angle Pose (Utthita Parsvakonasana)</strong>Another lovely side body stretch to create space for the baby, Extended Side Angle is also a wonderful prep pose for childbirth as it strengthens the quads and increases stamina.</p>
+          <div class="col s12"><img class="responsive-img" src="images/exercise/7.jpg"></div>
+          <p class="no-padding">Modify your typical expression by resting your front elbow on your front knee rather than reaching for the floor. This will help stabilize your body as bub grows and throws off your center of gravity.</p>
+
+         <p class="no-padding"><strong>8. Corpse Pose (Savasana)</strong>When you melt into Savasana, do so on your side, with a bolster placed between your legs as lying flat on your back is not recommended.Video Link for various yoga poses: https://www.youtube.com/watch?v=B87FpWtkIKA</p>
+         <div class="col s12"><img class="responsive-img" src="images/exercise/8.jpg"></div>
+      </div>
+      </div>
+    </div>
+    <div id="parent-confirm-first" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+        <form id="baby-register" class="col s12">
+          <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="name">Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="mobile" type="text" class="validate">
+              <label for="mobile">Mobile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              Gender
+              <select id="gender" class="browser-default">
+                <option value="" disabled selected>Select gender</option>
+                <option value="Male">Male</option>
+                <option value="FeMale">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              Dob
+              <input id="dob" type="text">
+              <!-- <label for="dob">Dob</label> -->
+            </div>
+          </div>
+          <a onclick="babyRegister('Baby');" class="waves-effect waves-light btn"><i class=""></i>Save</a><a class="modal-action modal-close waves-effect waves-light btn"><i class=""></i>Cancel</a>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    <div id="parent-confirm-sec" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+        <form id="baby-register2" class="col s12">
+          <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate">
+              <label for="name">Mother Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="mobile" type="text" class="validate">
+              <label for="mobile">Mobile</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              Dob
+              <input id="dob2" type="text">
+              <!-- <label for="dob">Dob</label> -->
+            </div>
+          </div>
+          <a onclick="babyRegister2('Mother');" class="waves-effect waves-light btn"><i class=""></i>Save</a><a class="modal-action modal-close waves-effect waves-light btn"><i class=""></i>Cancel</a>
+          </div>
+        </form>
+      </div>
+      </div>
+    </div>
+    
+    <div id="doctor-home" class="modal-big modal white">
+      <div class="modal-content">
+      <div class="row">
+        <table class="bordered">
+          <tr><td>Name</td><td id="dr_name"></td></tr>
+          <tr><td>Contact –no</td><td id="dr_mobile"></td></tr>
+          <tr><td>Qualifications</td><td id="dr_qualifications"></td></tr>
+          <!-- <tr><td id="dr_image"><img class="responsive-img" src="images/default_prof.png"></td></tr> -->
+          <tr><td>Experience</td><td id="dr_experience"></td></tr>
+          <tr><td>Address/About</td><td id="dr_about"></td></tr>
+        </table>
+        <div class="center">
+        <a style="min-width: 89%;" onclick="loadPatinet();" href="#patient-list"class="waves-effect waves-light btn modal-trigger"><i class=""></i>Patient List</a><br><br>
+          <a onclick="loadAppointments();" href="#appointment-list" class="waves-effect waves-light btn modal-trigger"><i class=""></i>Appointment Schedule</a>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+    <div id="patient-list" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div class="row">
+            <ul class="collection">
+            </ul>
+          </div>
+      </div>
+    </div>
+    </div>
+    <div id="appointment-list" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div id="temp_list" class="row">
+          </div>
+      </div>
+    </div>
+    <div id="doctor-list" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div class="row">
+            <ul class="collection">
+            </ul>
+            <div class="center">
+            <a onclick="getMyAppointment();" href="#my-appointment" class="waves-effect waves-light btn modal-trigger"><i class=""></i>My Appointment</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="my-appointment" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div class="row">
+            My Appointment
+            <ul class="collection">
+            </ul>
+          </div>
+      </div>
+    </div>
+    <div id="doctor-details" class="modal-big modal white">
+      <div class="modal-content no-padding">
+        <div class="row">
+        <table class="bordered">
+          <tr><td>Name</td><td id="dr_name"></td></tr>
+          <tr><td>Contact –no</td><td id="dr_mobile"></td></tr>
+          <tr><td>Qualifications</td><td id="dr_qualifications"></td></tr>
+          <!-- <tr><td id="dr_image"><img class="responsive-img" src="images/default_prof.png"></td></tr> -->
+          <tr><td>Experience</td><td id="dr_experience"></td></tr>
+          <tr><td>Address/About</td><td id="dr_about"></td></tr>
+        </table>
+        <div class="center">
+        <a onclick="bookAppointments();" href="#!" class="waves-effect waves-light btn bookAppointments"><i class=""></i>Book Appointment</a>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+    <div id="patient-details" class="modal-big modal white">
+      <div class="modal-content">
+          <div class="row">
+            <table class="bordered">
+              <tr><td>Name</td><td id="p_name"></td></tr>
+              <tr><td>Dob</td><td id="dr_dob"></td></tr>
+              <!-- <tr><td id="dr_image"><img class="responsive-img" src="images/default_prof.png"></td></tr> -->
+              <tr><td>Gender</td><td id="dr_gender"></td></tr>
+              <tr><td>Role</td><td id="dr_role"></td></tr>
+              <tr><td>Mobile</td><td id="dr_mobile"></td></tr>
+            </table>
+            <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="dr_notes" class="materialize-textarea"></textarea>
+                      <label for="dr_notes">Notes/Details</label>
+                    </div>
+                    <div class="center">
+                    <a onclick="updateNotes();" href="#!" class="waves-effect waves-light btn updateNotes_btn"><i class=""></i>Update Notes</a>
+                    </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="about" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div class="row">
+            <h4 class="red-text">About Us</h4>
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <img src="images/omkumar_dhanwant_2.jpg" alt="" class="circle">
+              <span class="title">OMKUMAR DHANWANT</span>
+              <a href="#!" class="secondary-content"></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="images/rahul.jpg" alt="" class="circle">
+              <span class="title">RAHUL WANKHEDE</span>
+              <a href="#!" class="secondary-content"></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="images/Sumit_Ramteke.jpg" alt="" class="circle">
+              <span class="title">SUMIT RAMTEKE</span>
+              <a href="#!" class="secondary-content"></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="images/Ujwal_Thakre.jpg" alt="" class="circle">
+              <span class="title">UJWAL THAKRE</span>
+              <a href="#!" class="secondary-content"></a>
+            </li>
+          </ul>
+          <div class="center"><p>GHRCE NAGPUR <br>SESSION:2016-2017</p></div>
+          </div>
+      </div>
+    </div>
+    <div id="contact" class="modal-big modal white">
+      <div class="modal-content no-padding">
+          <div class="row">
+            <h4 class="red-text">Contact Us</h4>
+            <div class="row">
+            <div class="col s12 m5">
+              <div class="card-panel teal">
+                <span class="white-text">
+                  <p>Write a mail on:<br><i class="mdi-content-mail"></i> info.carechild@gmail.com</p>
+                  OR
+                  <p>Call us on:<br><i class="mdi-communication-phone"></i> (+91)-7057003880,(+91)-8605384055</p>
+                </span>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+    
+     <script type="text/javascript">
+     function logout()
+    {
+      localStorage.removeItem("user_details");
+      localStorage.removeItem("doctor_details");
+      localStorage.removeItem("user_mother_details");
+      Materialize.toast("Logout Success...", 1700);
+      $( location ).attr("href", "index.html");
+    }
+     $('.modal-trigger').leanModal({
+        dismissible: true, // Modal can be dismissed by clicking outside of the modal
+        opacity: .5, // Opacity of modal background
+        in_duration: 300, // Transition in duration
+        out_duration: 200
+      });
+      $('.button-collapse').sideNav({
+      //menuWidth: 300, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        }
+      );
+      /*$('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+      });*/
+      //$('select').material_select();
+
+       $(document).ready(function(){ 
+           //logout();
+           //return;
+           checkLogin();
+           $('#dob').datetimepicker({
+              scrollInput: false,
+              //format:'Y/m/d',
+            });
+           $('#dob2').datetimepicker({
+              scrollInput: false,
+              //format:'Y/m/d',
+            });
+           $('#book_date').datetimepicker({
+              scrollInput: false,
+              //format:'Y/m/d',
+          });
+        });
+       function checkLogin(){
+        var doctor_details=localStorage.getItem("doctor_details");
+        var user_details=localStorage.getItem("user_details");
+        var user_mother_details=localStorage.getItem("user_mother_details");
+        if(doctor_details){
+          renderDoctorHome(doctor_details);
+        }else if(user_details){
+          console.log(user_details);
+          $("#parent-confirm-first-home").openModal();
+        }else if(user_mother_details){
+          console.log(user_mother_details);
+          $("#parent-confirm-sec-home").openModal();
+        }
+        
+       }
+       function renderDoctorHome(response){
+          console.log(response);
+          var response=JSON.parse(response);
+          dr_id=response['id'];
+          $("#doctor-home table #dr_name").text(response['name']);
+          $("#doctor-home table #dr_mobile").text(response['contacts']);
+          $("#doctor-home table #dr_qualifications").text(response['qualifications']);
+          //$("#doctor-home table #dr_image img").src(response['image']);
+          $("#doctor-home table #dr_experience").text(response['experience']+' Years');
+          $("#doctor-home table #dr_about").text(response['about']);
+          $("#doctor-home").openModal();
+       }
+     </script>
+    </body>
+</html>
